@@ -31,7 +31,9 @@
           </FormItem>
           <FormItem label="供应商选择" prop="billLimitAmt">
             <VendorFinder v-model="form.vendorId" />
-            Value: {{form.vendorId}}
+          </FormItem>
+          <FormItem label="供应商选择2" prop="billLimitAmt">
+            <VendorFinderDialog v-model="form.vendorId" ref="vendorFinderDialog" />
           </FormItem>
     </Form>
 
@@ -54,10 +56,12 @@
 <script>
   //import { vendorApi } from '@/api/vendor';
   import VendorFinder from '@/components/vendorFinder.vue'
+  import VendorFinderDialog from '@/components/vendorFinderDialog.vue'
   export default {
     name: 'CodeReviewListForm',
     components: {
       VendorFinder,
+      VendorFinderDialog,
     },
     props: {
       //是否为更新表单
@@ -132,6 +136,10 @@
     created() {},
     mounted() {},
     methods: {
+      showFindForm () {
+        console.log(1)
+        this.$refs.vendorFinderDialog.show()
+      },
       showModal () {
         console.log('show')
         this.display.modal1 = true

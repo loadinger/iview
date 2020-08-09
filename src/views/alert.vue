@@ -5,7 +5,9 @@
       v-model="modal1"
       title="Common Modal dialog box title"
       @on-ok="ok"
-      @on-cancel="cancel">
+      @on-cancel="cancel"
+     width="1000" 
+      >
     <VendorListForm />
     </Modal>
   </div>
