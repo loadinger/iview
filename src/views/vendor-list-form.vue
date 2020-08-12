@@ -33,7 +33,7 @@
             <VendorFinder v-model="form.vendorId" />
           </FormItem>
           <FormItem label="供应商选择2" prop="billLimitAmt">
-            <VendorFinderDialog v-model="form.vendorId" ref="vendorFinderDialog" />
+            <VendorFinderDialog v-model="form.vendorId" />
           </FormItem>
     </Form>
 

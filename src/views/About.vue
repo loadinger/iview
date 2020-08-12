@@ -77,7 +77,7 @@
 
 
     </Form>
-    <Row class="code-row-bg" justify="end" type="flex">          
+    <!-- <Row class="code-row-bg" justify="end" type="flex">          
       <Upload
         :action="uploadUrl"
         :headers="uploadHeader"
@@ -90,7 +90,7 @@
       
       <Button @click="cancel" style="margin-right:10px">取消</Button>
       <Button @click="save" type="primary">保存</Button>
-    </Row>
+    </Row> -->
 
 
     {{form}}
@@ -143,7 +143,7 @@
          billLimitAmt:null,
 
           //图片urls
-          imageUrl1: '',
+          imageUrl1: 'https://hbp1.happigo.com/csm/Public/Images/Advert/Advert_img_1596019186_userid_1.png',
           imageUrl2: '',
           imageUrl3: '',
 

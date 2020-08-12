@@ -10,15 +10,29 @@
       >
     <VendorListForm />
     </Modal>
+
+    <Tabs active-key="key1">
+        <Tab-pane label="企业基本信息" key="key1">
+          <VendorListForm />
+        </Tab-pane>
+        <Tab-pane label="联系信息" key="key2">
+          <about />
+        </Tab-pane>
+        <Tab-pane label="财务往来信息" key="key3">
+          456456456
+        </Tab-pane>
+    </Tabs>
   </div>
 </template>
 
 
 <script>
   import VendorListForm from './vendor-list-form.vue'
+  import About from './About.vue'
   export default {
     components: {
       VendorListForm,
+      About,
     },
     data () {
       return {

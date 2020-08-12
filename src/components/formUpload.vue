@@ -11,13 +11,13 @@
         </Upload>
       </div>
       <div class="form-image">
-        <img :src="form.imageUrl" v-if="form.imageUrl" @click="display.modalImage = true" />
+        <img :src="value" v-if="value" @click="display.modalImage = true" />
       </div>
     </div>
 
 
     <Modal title="View Image" v-model="display.modalImage">
-    <img :src="form.imageUrl" style="width: 100%">
+    <img :src="value" style="width: 100%">
     </Modal>
   </div>
 </template>
@@ -25,13 +25,10 @@
 <script>
   export default {
     props: [
-      'action',
+      'action', 'value'
     ],
     data () {
       return {
-        form: {
-          imageUrl: '',
-        },
         display: {
           modalImage: false,
         },
@@ -39,7 +36,6 @@
     },
     methods: {
       uploadSuccess (res, file) {
-        this.form.imageUrl = res.data.url
         this.$emit('input', res.data.url)
       },
     }
